@@ -25,17 +25,26 @@ var Vehicle = /** @class */ (function () {
     */
     function Vehicle(
     //readonly: only able to use atribute when initialize
-    brandName, model, color) {
+    brandName, model, color, price) {
         this.brandName = brandName;
         this.model = model;
         this.color = color;
+        this.price = price;
     }
+    /*
+    get getPrice() {
+         return this.price;
+     }
+     set setPrice(value:number) {
+      this.price = value;
+     }
+     */
     Vehicle.prototype.drive = function () {
         console.log("driving a " + this.brandName + ", model: " + this.model + ", color: " + this.color);
     };
     return Vehicle;
 }());
-var vehicle = new Vehicle('seat', '3', 'black');
+var vehicle = new Vehicle('seat', '3', 'black', 5000);
 vehicle.drive();
 var motorcycle = {
     brandName: 'yamaha',
@@ -52,5 +61,7 @@ var Car = /** @class */ (function (_super) {
     };
     return Car;
 }(Vehicle));
-var vehicle2 = new Car('mazda', '2', 'white');
+var vehicle2 = new Car('mazda', '2', 'white', 5000);
 vehicle2.drive();
+//vehicle2.setPrice
+//console.log(vehicle2.getPrice);
