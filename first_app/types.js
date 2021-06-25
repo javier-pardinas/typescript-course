@@ -9,6 +9,10 @@ var isCar = true;
 //declare an array (any accepts any type):
 var hobbies;
 hobbies = [123, 'music', 'movies'];
+var myCar = ['seat', 2021, 'black'];
+var myBike = ['seat', 2021, 'black'];
+console.log(myCar);
+console.log(myBike);
 for (var _i = 0, hobbies_1 = hobbies; _i < hobbies_1.length; _i++) {
     var hobbie = hobbies_1[_i];
     console.log(hobbie);

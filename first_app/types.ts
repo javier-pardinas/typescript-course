@@ -9,6 +9,13 @@ let isCar: boolean = true;
 //declare an array (any accepts any type):
 let hobbies: any[];
 hobbies = [123, 'music', 'movies'];
+//tuples:
+type vehicleType = [string, number, string];
+let myCar: [string, number, string] = ['seat', 2021, 'black'];
+let myBike: vehicleType = ['yamaha', 2020, 'white'];
+console.log(myCar);
+console.log(myBike);
+
 
 for (const hobbie of hobbies) {
 console.log(hobbie);
