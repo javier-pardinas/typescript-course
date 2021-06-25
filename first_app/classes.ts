@@ -10,9 +10,10 @@ class Vehicle {
     */
 
     constructor(
-        private brandName: string, 
-        private model: string, 
-        private color: string
+        //readonly: only able to use atribute when initialize
+        private readonly brandName: string, 
+        private readonly model: string, 
+        private readonly color: string
         ) {}
 
     drive() {
