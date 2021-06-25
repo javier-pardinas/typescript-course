@@ -24,6 +24,9 @@ var role;
     role[role["teacher"] = 1] = "teacher";
 })(role || (role = {}));
 ;
+//the literal type:
+var pet;
+//pet = 'duck';
 //declare an object:
 var user = {
     name: 'Pepe',

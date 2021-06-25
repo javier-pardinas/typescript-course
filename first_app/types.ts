@@ -20,6 +20,9 @@ console.log(myCar);
 console.log(myBike);
 //declare enum:
 enum role {student, teacher};
+//the literal type:
+let pet: 'pet';
+//pet = 'duck';
 
 //declare an object:
 let user: {
