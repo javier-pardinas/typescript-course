@@ -24,6 +24,21 @@ class Vehicle {
      this.price = value;
     }
     */
+   //the static methods and properties we can access them without creating an object.
+   //we are accessing a method or property of the class.
+   static PriceToCurrency(value:number, typeOfCurrency:string) {
+       let result = "";
+       switch(typeOfCurrency) {
+           case "EURO": 
+               result = "€" + value;
+               break;
+            
+           case "DOLLAR": 
+                result = "$" + value;
+                break;
+       }
+       return result;
+   }
     drive() {
         console.log(`driving a ${this.brandName}, model: ${this.model}, color: ${this.color}`)
     }
@@ -45,7 +60,12 @@ class Car extends Vehicle {
     }
 }
 
+//Static classes:
+
+
 const vehicle2 = new Car('mazda', '2', 'white', 5000);
 vehicle2.drive();
+
+console.log(Car.PriceToCurrency(200, 'DOLLAR'));
 //vehicle2.setPrice
 //console.log(vehicle2.getPrice);

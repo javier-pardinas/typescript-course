@@ -39,6 +39,18 @@ var Vehicle = /** @class */ (function () {
       this.price = value;
      }
      */
+    Vehicle.PriceToCurrency = function (value, typeOfCurrency) {
+        var result = "";
+        switch (typeOfCurrency) {
+            case "EURO":
+                result = "€" + value;
+                break;
+            case "DOLLAR":
+                result = "$" + value;
+                break;
+        }
+        return result;
+    };
     Vehicle.prototype.drive = function () {
         console.log("driving a " + this.brandName + ", model: " + this.model + ", color: " + this.color);
     };
@@ -61,7 +73,9 @@ var Car = /** @class */ (function (_super) {
     };
     return Car;
 }(Vehicle));
+//Static classes:
 var vehicle2 = new Car('mazda', '2', 'white', 5000);
 vehicle2.drive();
+console.log(Car.PriceToCurrency(200, 'DOLLAR'));
 //vehicle2.setPrice
 //console.log(vehicle2.getPrice);
