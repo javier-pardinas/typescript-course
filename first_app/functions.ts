@@ -16,8 +16,15 @@ sum2 = sum;
 let sum3: (a: number, b: number) => number;
 sum3 = sum;
 
+const printSth = (a: number, b:number, showResult: (value: number)=>void): void => {
+    let result = a+b;
+    showResult(result);
+}
+
 printSthV();
 printSthU();
 
 console.log(sum2(5, 5));
 console.log(sum3(15, 5));
+
+printSth(1, 2, x => console.log(x))

@@ -11,7 +11,12 @@ var sum2;
 sum2 = sum;
 var sum3;
 sum3 = sum;
+var printSth = function (a, b, showResult) {
+    var result = a + b;
+    showResult(result);
+};
 printSthV();
 printSthU();
 console.log(sum2(5, 5));
 console.log(sum3(15, 5));
+printSth(1, 2, function (x) { return console.log(x); });
