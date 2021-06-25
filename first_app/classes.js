@@ -48,7 +48,7 @@ var Car = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Car.prototype.drive = function () {
-        console.log('I am driving a vehicle');
+        console.log("I am driving a vehicle that is: " + this.brandName);
     };
     return Car;
 }(Vehicle));

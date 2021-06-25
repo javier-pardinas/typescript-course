@@ -11,7 +11,7 @@ class Vehicle {
 
     constructor(
         //readonly: only able to use atribute when initialize
-        private readonly brandName: string, 
+        protected readonly brandName: string, 
         private readonly model: string, 
         private readonly color: string
         ) {}
@@ -33,7 +33,7 @@ motorcycle.drive();
 
 class Car extends Vehicle {
     drive(): void {
-        console.log('I am driving a vehicle');
+        console.log(`I am driving a vehicle that is: ${this.brandName}`);
     }
 }
 
