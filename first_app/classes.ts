@@ -24,10 +24,18 @@ class Vehicle {
 const vehicle = new Vehicle('seat', '3', 'black');
 vehicle.drive();
 
-//driving a undefined:
 let motorcycle = {
     brandName: 'yamaha',
     drive: vehicle.drive
 }
 
 motorcycle.drive();
+
+class Car extends Vehicle {
+    drive(): void {
+        console.log('I am driving a vehicle');
+    }
+}
+
+const vehicle2 = new Car('mazda', '2', 'white');
+vehicle2.drive()
