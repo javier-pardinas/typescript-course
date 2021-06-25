@@ -9,17 +9,17 @@ let isCar: boolean = true;
 //declare an array (any accepts any type):
 let hobbies: any[];
 hobbies = [123, 'music', 'movies'];
+for (const hobbie of hobbies) {
+    console.log(hobbie);
+    }
 //tuples:
 type vehicleType = [string, number, string];
 let myCar: [string, number, string] = ['seat', 2021, 'black'];
 let myBike: vehicleType = ['yamaha', 2020, 'white'];
 console.log(myCar);
 console.log(myBike);
-
-
-for (const hobbie of hobbies) {
-console.log(hobbie);
-}
+//declare enum:
+enum role {student, teacher};
 
 //declare an object:
 let user: {
@@ -29,7 +29,8 @@ let user: {
         street: string,
         zipCode: number
     },
-    courses: string[]
+    courses: string[],
+    role: role
 } = {
     name: 'Pepe',
     age: 40,
@@ -37,7 +38,8 @@ let user: {
         street: "john flower",
         zipCode: 841
     },
-    courses: ['typescript', 'node.js', 'mongoDB']
+    courses: ['typescript', 'node.js', 'mongoDB'],
+    role: role.student
 };
 
 console.log(user);
