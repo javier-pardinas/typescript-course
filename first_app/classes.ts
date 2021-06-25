@@ -1,4 +1,5 @@
-class Vehicle {
+//abstract: you cannot be instantiated (only the classes that extend from you)
+abstract class Vehicle {
     /*private brandName: string;
     private model: string;
     private color: string;
@@ -39,12 +40,11 @@ class Vehicle {
        }
        return result;
    }
-    drive() {
-        console.log(`driving a ${this.brandName}, model: ${this.model}, color: ${this.color}`)
-    }
+   //you can also make abstract methods:
+    abstract drive(): void;
 }
 
-const vehicle = new Vehicle('seat', '3', 'black', 5000);
+/*const vehicle = new Vehicle('seat', '3', 'black', 5000);
 vehicle.drive();
 
 let motorcycle = {
@@ -53,8 +53,10 @@ let motorcycle = {
 }
 
 motorcycle.drive();
+*/
 
 class Car extends Vehicle {
+    //you are forced to implemnt the abstract methods from your parent:
     drive(): void {
         console.log(`I am driving a vehicle that is: ${this.brandName}`);
     }
