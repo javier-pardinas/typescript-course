@@ -11,5 +11,13 @@ const throwError = (message: string):never => {
         throw new Error(message);
 }
 
+let sum2: Function;
+sum2 = sum;
+let sum3: (a: number, b: number) => number;
+sum3 = sum;
+
 printSthV();
 printSthU();
+
+console.log(sum2(5, 5));
+console.log(sum3(15, 5));
