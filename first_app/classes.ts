@@ -1,12 +1,19 @@
 class Vehicle {
-    private brandName: string;
+    /*private brandName: string;
     private model: string;
     private color: string;
-    constructor(b: string, model: string, color: string) {
-        this.brandName = b;
+    constructor(brandName: string, model: string, color: string) {
+        this.brandName = brandName;
         this.model = model;
         this.color = color;
     }
+    */
+
+    constructor(
+        private brandName: string, 
+        private model: string, 
+        private color: string
+        ) {}
 
     drive() {
         console.log(`driving a ${this.brandName}, model: ${this.model}, color: ${this.color}`)

@@ -1,6 +1,15 @@
 var Vehicle = /** @class */ (function () {
-    function Vehicle(b, model, color) {
-        this.brandName = b;
+    /*private brandName: string;
+    private model: string;
+    private color: string;
+    constructor(brandName: string, model: string, color: string) {
+        this.brandName = brandName;
+        this.model = model;
+        this.color = color;
+    }
+    */
+    function Vehicle(brandName, model, color) {
+        this.brandName = brandName;
         this.model = model;
         this.color = color;
     }
