@@ -1,6 +1,6 @@
 type StringOrNumber = string | number;
 
-const padLeft = (value: string, padding: string|number) => {
+const padLeft = (value: string, padding: StringOrNumber) => {
     if (typeof padding === 'number') {
         return Array(padding + 1).join(' ') + value;
     }
